@@ -14,5 +14,21 @@ const botClient = new Client({
     ]
 });
 
-//
+//Listen for bot
+botClient.on('ready', (bc) => {
+    console.log(`READY: ${bc.user.tag}`)
+});
+
+//Listen for message (msg, content is soly that part of the array)
+botClient.on('messageCreate', (msg) => {
+    console.log(msg.content)
+
+    if (msg.author.bot) {
+        return;
+    }
+
+    msg.reply('Forward')
+})
+
+//env file for token secret
 botClient.login(process.env.SECRET_TOKEN);
