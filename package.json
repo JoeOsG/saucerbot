@@ -1,0 +1,23 @@
+{
+  "name": "saucerbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoeOsG/saucerbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoeOsG/saucerbot/issues"
+  },
+  "homepage": "https://github.com/JoeOsG/saucerbot#readme",
+  "dependencies": {
+    "discord.js": "^14.16.3"
+  }
+}
