@@ -14,9 +14,17 @@ const botClient = new Client({
     ]
 });
 
-//Listen for bot
+//  Listen for bot
 botClient.on('ready', (bc) => {
     console.log(`READY: ${bc.user.tag}`)
+});
+
+botClient.on('interactionCreate', (interact) => {
+    if (!interact.isChatInputCommand()) return;
+
+    if (interact.commandName === 'hey') {
+        interact.reply('¡Saludos!');
+    }
 });
 
 //Listen for message (msg, content is soly that part of the array)
